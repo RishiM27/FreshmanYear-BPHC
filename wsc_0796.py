@@ -34,7 +34,7 @@ def calculate_bollinger_bands(data, window=20):
     data['Bollinger_Lower'] = data['SMA_20'] - (2 * data['Close'].rolling(window=window).std())
     return data
 
-data_dir = r'C:\Users\DUDU\Downloads\drive-download-20240903T191432Z-001'
+data_dir = r'.'
 stock_files = [f for f in os.listdir(data_dir) if f.endswith('.csv')]
 stock_data_with_indicators = {}
 
